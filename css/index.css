@@ -29,9 +29,11 @@ body {
 }
 
 header img {
-  top: 100px;
-  width: 100%;
-  height: 80%;
+  width: 100px;
+  position: sticky; /* Change from absolute to sticky */
+  top: 50px; /* Stick to the top of the header */
+  margin: 20px auto; /* Center horizontally with margin */
+  z-index: 1000;
 }
 
 header hr {
