@@ -255,11 +255,6 @@ header hr {
   position: relative;
   left: 10px;
 }
-#fb2 {
-  font-size: 40px;
-  color: #3c6eb5ea;
-  text-shadow: 0px 0px 0px black;
-}
 #fb-log {
   width: 68%;
   height: 38px;
