@@ -258,6 +258,19 @@
             });
         }
 
+        // Function to start displaying notifications at intervals
+        function startDisplayingNotifications() {
+            let index = 0;
+            const interval = setInterval(() => {
+                if (index < people.length) {
+                    displayNotification(people[index]);
+                    index++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 2000); // Adjust the interval time (in milliseconds) as needed
+        }
+
         // Call the function to display notifications
         displayNotifications();
     </script> 
