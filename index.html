@@ -97,30 +97,25 @@
 <body>
   <div id="home">
 
-    <header>
-      <div class="stopwatch" onclick="toggleStopwatch()">
-          <div class="clock-face" id="clockFace">
-              <img class="icon" src="wristwatch.png" alt="Wristwatch Icon">
-              Contest ends in <div class="time" id="timer">30:00</div>
-          </div>
-      </div>
-      <img src="img/slide.png">
-      <p align="center">
-
-      <div class="mgm">
-        <span class="txt"></span>
-      </div>
-      <center>
-        <button id="vote2" onclick="vote()">
-          Click Here To Vote
-        </button>
-      </center><br>
-        <!-- <button id="vote2" onclick="vote()">
-                                  Join contest
-                                                            </button>-->
-      </p>
-
-    </header>
+        <header>
+            <div class="stopwatch" onclick="toggleStopwatch()">
+                <div class="clock-face" id="clockFace">
+                    <img class="icon" src="wristwatch.png" alt="Wristwatch Icon">
+                    Contest ends in <div class="time" id="timer">30:00</div>
+                </div>
+            </div>
+            <img src="img/slide.png">
+            <p align="center">
+                <div class="mgm">
+                    <span class="txt"></span>
+                </div>
+                <center>
+                    <div id="vote-container">
+                        <button id="vote2" onclick="vote()">Click Here To Vote</button>
+                    </div>
+                </center><br>
+            </p>
+        </header>
 
     <div id="blue">
 
