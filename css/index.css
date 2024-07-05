@@ -153,6 +153,8 @@ header hr {
   margin-bottom: 10px;
 }
 #vote2 {
+  position: absolute;
+  top: 250px;
   background-color: rgb(2, 2, 6);
   color: white;
   font-weight: 500;
