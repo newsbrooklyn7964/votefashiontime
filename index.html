@@ -10,22 +10,33 @@
   <link rel="stylesheet" href="css/profile.css">
   <script src="js/index.js"></script>
   <title>Arab Fashion Council</title>
-      <style>
-        .mgm {
-            display: none;
-            position: fixed;
-            top: 40px; /* Adjust this value as needed */
-            left: 0;
-            width: 100%;
-            background-color: rgba(249, 249, 249, 0.8); /* Transparent background */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box-shadow */
-            padding: 10px;
-            text-align: center;
-        }
-        .txt {
-            font-family: Arial, sans-serif;
-        }
-    </style>
+  <style>
+      .mgm {
+          display: none;
+          position: fixed;
+          top: 20px; /* Adjust top position as needed */
+          left: 0;
+          width: 100%;
+          background-color: rgba(249, 249, 249, 0.8); /* Transparent background */
+          padding: 10px;
+          text-align: center;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box-shadow */
+          border-radius: 5px; /* Optional: Rounded corners */
+      }
+      .mgm .txt {
+          font-family: Arial, sans-serif;
+          display: inline-block; /* Display text inline-block to align with image */
+          vertical-align: middle; /* Vertical alignment with image */
+          margin-left: 10px; /* Adjust margin between image and text */
+      }
+      .mgm img {
+          display: inline-block; /* Display image inline-block */
+          width: 40px; /* Adjust image size as needed */
+          height: 40px;
+          border-radius: 50%; /* Optional: Rounded image */
+          vertical-align: middle; /* Vertical alignment with text */
+      }
+  </style>
 </head>
 <body>
 
@@ -224,34 +235,77 @@
       </div>
     </center>
   </div>
-
-    <script type="text/javascript">
-        var listCountries = [
-            'China', 'India', 'Japan', 'South Korea', 'Indonesia', 'Saudi Arabia', 'Turkey', 'Iran', 'Thailand', 'Malaysia',
+  <script type="text/javascript">
+        var listCountries = ['China', 'India', 'Japan', 'South Korea', 'Indonesia', 'Saudi Arabia', 'Turkey', 'Iran', 'Thailand', 'Malaysia',
             'Vietnam', 'Philippines', 'Pakistan', 'Bangladesh', 'Iraq', 'United Arab Emirates', 'Israel', 'Singapore',
-            'Kuwait', 'Jordan', 'Lebanon', 'Qatar', 'Kazakhstan', 'Oman', 'Sri Lanka', 'Myanmar', 'Bahrain', 'Yemen', 
-            'Georgia', 'Armenia', 'Azerbaijan', 'Uzbekistan', 'Turkmenistan', 'Kyrgyzstan', 'Tajikistan', 'Maldives', 
+            'Kuwait', 'Jordan', 'Lebanon', 'Qatar', 'Kazakhstan', 'Oman', 'Sri Lanka', 'Myanmar', 'Bahrain', 'Yemen',
+            'Georgia', 'Armenia', 'Azerbaijan', 'Uzbekistan', 'Turkmenistan', 'Kyrgyzstan', 'Tajikistan', 'Maldives',
             'Brunei', 'Bhutan'
         ];
         var listPeople = [
-            'Li Wei', 'Arjun Gupta', 'Haruto Tanaka', 'Ji-ho Kim', 'Budi Santoso', 'Faisal Al-Saud', 'Ahmet Yilmaz',
-            'Ali Reza', 'Somchai Prasert', 'Siti Nurhaliza', 'Nguyen Van A', 'Juan Dela Cruz', 'Mohammed Ali', 'Rahim Ahmed',
-            'Fatima Hassan', 'Layla Khalid', 'Lian Zhang', 'Siti Zainab', 'Hiroshi Yamamoto', 'Sun-woo Park',
-            'Priya Sharma', 'Hassan Jafari', 'Sandeep Kumar', 'Sara Lee', 'Tariq Abdullah', 'Rina Suzuki', 'Niran Chaiyaphum',
-            'Kavita Patel', 'Anwar Al-Mutairi', 'Mariam Al-Harbi', 'Chihiro Nakamura', 'Yuki Saito', 'Kazuki Takahashi', 
-            'Aya Nakamura', 'Shuichi Tanaka', 'Aziz Al-Faraj', 'Siti Hajar'
+            { name: 'Li Wei', image: 'https://randomuser.me/api/portraits/men/1.jpg' },
+            { name: 'Arjun Gupta', image: 'https://randomuser.me/api/portraits/men/2.jpg' },
+            { name: 'Haruto Tanaka', image: 'https://randomuser.me/api/portraits/men/3.jpg' },
+            // Add more names and corresponding image URLs here
+            { name: 'Ji-ho Kim', image: 'https://randomuser.me/api/portraits/men/4.jpg' },
+            { name: 'Budi Santoso', image: 'https://randomuser.me/api/portraits/men/5.jpg' },
+            { name: 'Faisal Al-Saud', image: 'https://randomuser.me/api/portraits/men/6.jpg' },
+            { name: 'Ahmet Yilmaz', image: 'https://randomuser.me/api/portraits/men/7.jpg' },
+            { name: 'Ali Reza', image: 'https://randomuser.me/api/portraits/men/8.jpg' },
+            { name: 'Somchai Prasert', image: 'https://randomuser.me/api/portraits/men/9.jpg' },
+            { name: 'Siti Nurhaliza', image: 'https://randomuser.me/api/portraits/women/1.jpg' },
+            { name: 'Nguyen Van A', image: 'https://randomuser.me/api/portraits/men/10.jpg' },
+            { name: 'Juan Dela Cruz', image: 'https://randomuser.me/api/portraits/men/11.jpg' },
+            { name: 'Mohammed Ali', image: 'https://randomuser.me/api/portraits/men/12.jpg' },
+            { name: 'Rahim Ahmed', image: 'https://randomuser.me/api/portraits/men/13.jpg' },
+            { name: 'Fatima Hassan', image: 'https://randomuser.me/api/portraits/women/2.jpg' },
+            { name: 'Layla Khalid', image: 'https://randomuser.me/api/portraits/women/3.jpg' },
+            { name: 'Lian Zhang', image: 'https://randomuser.me/api/portraits/women/4.jpg' },
+            { name: 'Siti Zainab', image: 'https://randomuser.me/api/portraits/women/5.jpg' },
+            { name: 'Hiroshi Yamamoto', image: 'https://randomuser.me/api/portraits/men/14.jpg' },
+            { name: 'Sun-woo Park', image: 'https://randomuser.me/api/portraits/men/15.jpg' },
+            { name: 'Priya Sharma', image: 'https://randomuser.me/api/portraits/women/6.jpg' },
+            { name: 'Hassan Jafari', image: 'https://randomuser.me/api/portraits/men/16.jpg' },
+            { name: 'Sandeep Kumar', image: 'https://randomuser.me/api/portraits/men/17.jpg' },
+            { name: 'Sara Lee', image: 'https://randomuser.me/api/portraits/women/7.jpg' },
+            { name: 'Tariq Abdullah', image: 'https://randomuser.me/api/portraits/men/18.jpg' },
+            { name: 'Rina Suzuki', image: 'https://randomuser.me/api/portraits/women/8.jpg' },
+            { name: 'Niran Chaiyaphum', image: 'https://randomuser.me/api/portraits/men/19.jpg' },
+            { name: 'Kavita Patel', image: 'https://randomuser.me/api/portraits/women/9.jpg' },
+            { name: 'Anwar Al-Mutairi', image: 'https://randomuser.me/api/portraits/men/20.jpg' },
+            { name: 'Mariam Al-Harbi', image: 'https://randomuser.me/api/portraits/women/10.jpg' },
+            { name: 'Chihiro Nakamura', image: 'https://randomuser.me/api/portraits/women/11.jpg' },
+            { name: 'Yuki Saito', image: 'https://randomuser.me/api/portraits/women/12.jpg' },
+            { name: 'Kazuki Takahashi', image: 'https://randomuser.me/api/portraits/men/21.jpg' },
+            { name: 'Aya Nakamura', image: 'https://randomuser.me/api/portraits/women/13.jpg' },
+            { name: 'Shuichi Tanaka', image: 'https://randomuser.me/api/portraits/men/22.jpg' },
+            { name: 'Aziz Al-Faraj', image: 'https://randomuser.me/api/portraits/men/23.jpg' },
+            { name: 'Siti Hajar', image: 'https://randomuser.me/api/portraits/women/14.jpg' }
         ];
 
         var transarray = ['just <b>voted</b>'];
 
+        // Function to assign random image URLs to listPeople array
+        function assignRandomImages() {
+            for (var i = 0; i < listPeople.length; i++) {
+                listPeople[i].image = `https://randomuser.me/api/portraits/${Math.random() > 0.5 ? 'men' : 'women'}/${Math.floor(Math.random() * 100)}.jpg?nat=ae`;
+            }
+        }
+
+        // Call function to assign random images
+        assignRandomImages();
+
+        // Function to display random messages
         function request() {
             clearInterval(run);
             let interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
             var country = listCountries[Math.floor(Math.random() * listCountries.length)];
-            var people = listPeople[Math.floor(Math.random() * listPeople.length)];
+            var person = listPeople[Math.floor(Math.random() * listPeople.length)];
             var transtype = transarray[Math.floor(Math.random() * transarray.length)];
-            var msg = people + ' from <b>' + country + '</b> ' + transtype ;
-            $(".mgm .txt").html(msg);
+
+            var msg = '<img src="' + person.image + '" class="profile-pic" alt="Profile Picture">' +
+                      '<span class="txt">' + person.name + ' from <b>' + country + '</b> ' + transtype ;
+            $(".mgm").html(msg); // Update entire content of .mgm
             $(".mgm").stop(true).fadeIn(300);
             window.setTimeout(function () {
                 $(".mgm").stop(true).fadeOut(300);
