@@ -28,6 +28,12 @@ body {
   display: none;
 }
 
+header img {
+  top: 100px;
+  width: 100%;
+  height: 80%;
+}
+
 header hr {
   font-family: fontawesome;
   width: 100%;
