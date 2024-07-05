@@ -38,11 +38,11 @@
       }
   </style>
   
-  <style>
+     <style>
         .stopwatch {
             width: 100px;
             position: sticky;
-            top: 50px;
+            top: 20px;
             right: 20px;
             border-radius: 50%;
             background: radial-gradient(circle, #ccc 70%, #fff);
@@ -74,21 +74,37 @@
             width: 40px; /* Set the width of the image */
             height: 40px; /* Set the height of the image */
         }
+        .hide-button {
+            position: absolute;
+            top: 20px;
+            right: 140px;
+            z-index: 1000;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hide-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
+  <div id="home">
 
+    <button class="hide-button" onclick="toggleStopwatch()">Hide Stopwatch</button>
       <div class="stopwatch">
         <div class="clock-face" id="clockFace">
             <img class="icon" src="wristwatch.png" alt="Wristwatch Icon">
-            Contest ending in <div class="time" id="timer">30:00</div>
+            Contest ends in <div class="time" id="timer">30:00</div>
         </div>
     </div>
 
     <div class="mgm">
         <span class="txt"></span>
     </div>
-  <div id="home">
     <header>
       <img src="img/slide.png">
       <p align="center">
