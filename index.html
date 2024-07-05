@@ -10,89 +10,86 @@
   <link rel="stylesheet" href="css/profile.css">
   <script src="js/index.js"></script>
   <title>Arab Fashion Council</title>
-  <style>
-      .mgm {
-          display: none;
-          position: fixed;
-          top: 200px; /* Adjust top position as needed */
-          left: 0;
-          width: 100%;
-          background-color: rgba(249, 249, 249, 0.8); /* Transparent background */
-          padding: 10px;
-          text-align: center;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box-shadow */
-          border-radius: 5px; /* Optional: Rounded corners */
-      }
-      .mgm .txt {
-          font-family: Arial, sans-serif;
-          display: inline-block; /* Display text inline-block to align with image */
-          vertical-align: middle; /* Vertical alignment with image */
-          margin-left: 10px; /* Adjust margin between image and text */
-      }
-      .mgm img {
-          display: inline-block; /* Display image inline-block */
-          width: 40px; /* Adjust image size as needed */
-          height: 40px;
-          border-radius: 50%; /* Optional: Rounded image */
-          vertical-align: middle; /* Vertical alignment with text */
-      }
-      
-      .show-mgm #vote2 {
-          margin-top: 20px; /* Adjust the margin value as needed */
-      }
-
-      .stopwatch {
-          width: 100px;
-          position: sticky; /* Change from absolute to sticky */
-          top: 50px; /* Adjust top position to place it above the image */
-          left: 50%; /* Center horizontally */
-          transform: translateX(-50%); /* Center horizontally */
-          border-radius: 50%;
-          background: radial-gradient(circle, #ccc 70%, #fff);
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-          z-index: 1000;
-      }
-      .clock-face {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 80%;
-          height: 80%;
-          border-radius: 50%;
-          background-color: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          font-size: 12px;
-          font-weight: 400;
-          text-align: center;
-          box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
-      }
-      .time {
-          font-size: 14px;
-      }
-      .icon {
-          width: 40px; /* Set the width of the image */
-          height: 40px; /* Set the height of the image */
-      }
-      .hide-button {
-          position: absolute;
-          top: 20px;
-          right: 140px;
-          z-index: 1000;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          padding: 10px 20px;
-          cursor: pointer;
-          border-radius: 5px;
-      }
-      .hide-button:hover {
-          background-color: #0056b3;
-      }
-  </style>
+    <style>
+        .mgm {
+            display: none;
+            position: fixed;
+            top: 200px; /* Adjust top position as needed */
+            left: 0;
+            width: 100%;
+            background-color: rgba(249, 249, 249, 0.8); /* Transparent background */
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box-shadow */
+            border-radius: 5px; /* Optional: Rounded corners */
+        }
+        .mgm .txt {
+            font-family: Arial, sans-serif;
+            display: inline-block; /* Display text inline-block to align with image */
+            vertical-align: middle; /* Vertical alignment with image */
+            margin-left: 10px; /* Adjust margin between image and text */
+        }
+        .mgm img {
+            display: inline-block; /* Display image inline-block */
+            width: 40px; /* Adjust image size as needed */
+            height: 40px;
+            border-radius: 50%; /* Optional: Rounded image */
+            vertical-align: middle; /* Vertical alignment with text */
+        }
+        .stopwatch {
+            width: 100px;
+            position: sticky; /* Change from absolute to sticky */
+            top: 0; /* Stick to the top of the header */
+            margin: 20px auto; /* Center horizontally with margin */
+            border-radius: 50%;
+            background: radial-gradient(circle, #ccc 70%, #fff);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .clock-face {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: center;
+            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+        .time {
+            font-size: 14px;
+        }
+        .icon {
+            width: 40px; /* Set the width of the image */
+            height: 40px; /* Set the height of the image */
+        }
+        .hide-button {
+            position: absolute;
+            top: 20px;
+            right: 140px;
+            z-index: 1000;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hide-button:hover {
+            background-color: #0056b3;
+        }
+        .show-mgm #vote2 {
+            margin-top: 20px; /* Adjust the margin value as needed */
+        }
+    </style>
 </head>
 <body>
   <div id="home">
