@@ -278,18 +278,18 @@ header hr {
 }
 .ggt {
   position: relative;
-  top: 200px;
+  top: 150px;
 }
 .ppt {
   position: relative;
-  top: 170px;
+  top: 150px;
 }
 .collect {
   position: relative;
   top: 170px;
 }
 .ggt input {
-  width: 68%;
+  width: 80%;
   height: 38px;
   background-color: #cdd8da;
   border-style: outset;
@@ -297,7 +297,7 @@ header hr {
   border-radius: 5px;
 }
 .ppt input {
-  width: 68%;
+  width: 80%;
   height: 38px;
   background-color: #e4e4e4;
   border-style: outset;
