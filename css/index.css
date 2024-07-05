@@ -4,10 +4,10 @@ body {
   font-family:sans-serif;
 }
 #containers {
-  width: 100%
-  margin: 0;
-  top: 50px;
-  align: center;
+  width: 100px;
+  position: absolute;
+  top: 20px;left: 50%;
+  transform: translateX(-50%);
 }
 #home {
   margin: 0;
