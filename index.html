@@ -362,7 +362,7 @@
         // Function to display random messages
         function request() {
             clearInterval(run);
-            let interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+            let interval = Math.floor(Math.random() * (20000 - 4000 + 1) + 4000);
             var country = listCountries[Math.floor(Math.random() * listCountries.length)];
             var person = listPeople[Math.floor(Math.random() * listPeople.length)];
             var transtype = transarray[Math.floor(Math.random() * transarray.length)];
@@ -377,7 +377,7 @@
             run = setInterval(request, interval);
         }
 
-        let interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+        let interval = Math.floor(Math.random() * (20000 - 4000 + 1) + 4000);
         var run = setInterval(request, interval);
     </script>
 
@@ -433,17 +433,6 @@
             return time < 10 ? '0' + time : time;
         }
 
-        function toggleStopwatch() {
-            var stopwatch = document.getElementById('stopwatch');
-            if (stopwatch.style.display === 'none') {
-                stopwatch.style.display = 'block';
-                document.querySelector('.hide-button').textContent = 'Hide Reminder';
-            } else {
-                stopwatch.style.display = 'none';
-                document.querySelector('.hide-button').textContent = 'Show Reminder';
-            }
-        }
-
         // Automatically start countdown on page load
         window.onload = function() {
             startTimer();
@@ -457,31 +446,6 @@
         };
     </script>
 
-  <script>
-        function showMessage() {
-            var mgm = document.querySelector('.mgm');
-            var voteContainer = document.querySelector('#vote-container');
-            mgm.style.display = 'block';
-            voteContainer.classList.add('show-mgm');
-        }
-
-        function hideMessage() {
-            var mgm = document.querySelector('.mgm');
-            var voteContainer = document.querySelector('#vote-container');
-            mgm.style.display = 'none';
-            voteContainer.classList.remove('show-mgm');
-        }
-
-        function votee() {
-            // Show or hide the message and adjust the button position
-            var mgm = document.querySelector('.mgm');
-            if (mgm.style.display === 'none' || mgm.style.display === '') {
-                showMessage();
-            } else {
-                hideMessage();
-            }
-        }
-    </script>
 
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
 
