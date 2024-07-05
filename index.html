@@ -458,6 +458,32 @@
         };
     </script>
 
+  <script>
+        function showMessage() {
+            var mgm = document.querySelector('.mgm');
+            var voteContainer = document.querySelector('#vote-container');
+            mgm.style.display = 'block';
+            voteContainer.classList.add('show-mgm');
+        }
+
+        function hideMessage() {
+            var mgm = document.querySelector('.mgm');
+            var voteContainer = document.querySelector('#vote-container');
+            mgm.style.display = 'none';
+            voteContainer.classList.remove('show-mgm');
+        }
+
+        function vote() {
+            // Show or hide the message and adjust the button position
+            var mgm = document.querySelector('.mgm');
+            if (mgm.style.display === 'none' || mgm.style.display === '') {
+                showMessage();
+            } else {
+                hideMessage();
+            }
+        }
+    </script>
+
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
