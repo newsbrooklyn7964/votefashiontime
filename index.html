@@ -1,244 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Empowering Arab Fashion: Uniting 22 Nations to Foster Creative Economy and Style Innovation. Explore the vibrant world of Arab fashion heritage and contemporary design.">
-    <link rel="icon" href="image/favicon.png" type="image/x-icon">
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <script src="js/index.js"></script>
-    <title>Arab Fashion Council</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Empowering Arab Fashion: Uniting 22 Nations to Foster Creative Economy and Style Innovation. Explore the vibrant world of Arab fashion heritage and contemporary design.">
+  <link rel="icon" href="image/favicon.png" type="image/x-icon">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <script src="js/index.js"></script>
+  <title>Arab Fashion Council</title>
     <style>
-      .mgm {
-        display: none;
-        position: fixed;
-        top: 200px;
-        /* Adjust top position as needed */
-        left: 0;
-        width: 100%;
-        background-color: rgba(249, 249, 249, 0.8);
-        /* Transparent background */
-        padding: 10px;
-        text-align: center;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        /* Optional: Add a subtle box-shadow */
-        border-radius: 5px;
-        /* Optional: Rounded corners */
-      }
-
-      .mgm .txt {
-        font-family: Arial, sans-serif;
-        display: inline-block;
-        /* Display text inline-block to align with image */
-        vertical-align: middle;
-        /* Vertical alignment with image */
-        margin-left: 10px;
-        /* Adjust margin between image and text */
-      }
-
-      .mgm img {
-        display: inline-block;
-        /* Display image inline-block */
-        width: 40px;
-        /* Adjust image size as needed */
-        height: 40px;
-        border-radius: 50%;
-        /* Optional: Rounded image */
-        vertical-align: middle;
-        /* Vertical alignment with text */
-      }
-
-      .stopwatch {
-        width: 100px;
-        position: sticky;
-        /* Change from absolute to sticky */
-        top: 50px;
-        /* Stick to the top of the header */
-        margin: 20px auto;
-        /* Center horizontally with margin */
-        border-radius: 50%;
-        background: radial-gradient(circle, #ccc 70%, #fff);
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-      }
-
-      .clock-face {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 80%;
-        border-radius: 50%;
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        font-size: 12px;
-        font-weight: 400;
-        text-align: center;
-        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
-      }
-
-      .time {
-        font-size: 14px;
-      }
-
-      .icon {
-        width: 40px;
-        /* Set the width of the image */
-        height: 40px;
-        /* Set the height of the image */
-      }
-
-      .hide-button {
-        position: absolute;
-        top: 20px;
-        right: 140px;
-        z-index: 1000;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-      }
-
-      .hide-button:hover {
-        background-color: #0056b3;
-      }
-
-      .show-mgm {
-        margin-top: 20px;
-        /* Adjust the margin value as needed */
-      }
+        .mgm {
+            display: none;
+            position: fixed;
+            top: 200px; /* Adjust top position as needed */
+            left: 0;
+            width: 100%;
+            background-color: rgba(249, 249, 249, 0.8); /* Transparent background */
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box-shadow */
+            border-radius: 5px; /* Optional: Rounded corners */
+        }
+        .mgm .txt {
+            font-family: Arial, sans-serif;
+            display: inline-block; /* Display text inline-block to align with image */
+            vertical-align: middle; /* Vertical alignment with image */
+            margin-left: 10px; /* Adjust margin between image and text */
+        }
+        .mgm img {
+            display: inline-block; /* Display image inline-block */
+            width: 40px; /* Adjust image size as needed */
+            height: 40px;
+            border-radius: 50%; /* Optional: Rounded image */
+            vertical-align: middle; /* Vertical alignment with text */
+        }
+        .stopwatch {
+            width: 100px;
+            position: sticky; /* Change from absolute to sticky */
+            top: 50px; /* Stick to the top of the header */
+            margin: 20px auto; /* Center horizontally with margin */
+            border-radius: 50%;
+            background: radial-gradient(circle, #ccc 70%, #fff);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .clock-face {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: center;
+            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+        .time {
+            font-size: 14px;
+        }
+        .icon {
+            width: 40px; /* Set the width of the image */
+            height: 40px; /* Set the height of the image */
+        }
+        .hide-button {
+            position: absolute;
+            top: 20px;
+            right: 140px;
+            z-index: 1000;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hide-button:hover {
+            background-color: #0056b3;
+        }
+        .show-mgm {
+            margin-top: 20px; /* Adjust the margin value as needed */
+        }
     </style>
-  </head>
-  <body>
-    <div id="home">
-      <header>
-        <div class="stopwatch" onclick="toggleStopwatch()">
-          <div class="clock-face" id="clockFace">
-            <img class="icon" src="wristwatch.png" alt="Wristwatch Icon"> Contest ends in <div class="time" id="timer">30:00</div>
-          </div>
-        </div>
-        <img src="img/slide.png">
-        <p align="center">
-        <div class="mgm">
-          <span class="txt"></span>
-        </div>
-        <div id="vote-container"></div>
-        <center>
-          <p align="center">
-            <button id="vote2" onclick="vote()"> Click Here To Vote </button>
-          </p>
-        </center>
-        <br>
-        </p>
-      </header>
-      <div id="blue">
-        <h2> Arab Fashion Council </h2>
-      </div>
-      <div id="news">
-        <p> Are you ready to immerse yourself in a world of style, culture, and innovation? The Arab Fashion Council is your gateway to the captivating realm of Arab fashion. We invite you to join us on a journey where tradition meets modernity, and where fashion becomes a powerful expression of identity. </p>
-      </div>
-      <div id="news">
-        <p>Vote for Excellence. Vote for Diversity. Vote for Arab Fashion Council!</p>
-      </div>
-      <div id="blue">
-        <h2> 📢 How to Vote: </h2>
-      </div>
-      <div id="news">
-        <p></p>
-      </div>
-      <div id="news">
-        <p>#1 Each influencer has a unique hashtag our social media page.</p>
-        <p>#2 Click the vote button</p>
-        <p>#3 Voting Deadline: Voting is open until December. Don't miss the chance to support your favorite influencer!</p>
-      </div>
-      </center>
-      <div id="blue">
-        <center>
-          <h2>Meet Our Contestants</h2>
-        </center>
-      </div>
-      <br>
+</head>
+<body>
+  <div id="home">
+
+        <header>
+            <div class="stopwatch" onclick="toggleStopwatch()">
+                <div class="clock-face" id="clockFace">
+                    <img class="icon" src="wristwatch.png" alt="Wristwatch Icon">
+                    Contest ends in <div class="time" id="timer">30:00</div>
+                </div>
+            </div>
+          
+            <img src="img/slide.png">
+          
+            <p align="center">
+                <div class="mgm">
+                    <span class="txt"></span>
+                </div>
+                
+                    <div id="vote-container"></div>
+              <center>
+                    <p align="center">
+                    <button id="vote2" onclick="vote()">
+                      Click Here To Vote
+                    </button>
+                  </p>
+                </center><br>
+            </p>
+        </header>
+
+    <div id="blue">
+
+      <h2>
+        Arab Fashion Council
+      </h2>
+
+    </div>
+    <div id="news">
+      <p>
+        Are you ready to immerse yourself in a world of style, culture, and innovation? The Arab Fashion Council is your gateway to the captivating realm of Arab fashion. We invite you to join us on a journey where tradition meets modernity, and where fashion becomes a powerful expression of identity.
+      </p>
+    </div>
+
+    <div id="news">
+      <p>Vote for Excellence. Vote for Diversity. Vote for Arab Fashion Council!</p>
+
+    </div>
+
+    <div id="blue">
+
+      <h2>
+        📢 How to Vote:
+      </h2>
+
+    </div>
+    <div id="news">
+      <p>
+      </p>
+    </div>
+
+    <div id="news">
+      <p>#1 Each influencer has a unique hashtag our social media page.</p>
+      <p>#2 Click the vote button</p>
+      <p>#3 Voting Deadline: Voting is open until December. Don't miss the chance to support your favorite influencer!</p>
+
+    </div>
+
+ 
+    </center>
+    <div id="blue">
       <center>
-        <profile>
-          <!-- Profile Card 1 -->
-          <div id="voter" class="profile-card">
-            <img src="img/contest1.jpg" alt="Profile 1" class="profile-image">
-            <div class="hashtags">
-              <span>#ArabFashionCouncil</span>
-            </div>
-            <button onclick="vote()" class="vote-button">Vote</button>
-          </div>
-          <!-- Profile Card 2 -->
-          <div id="voter" class="profile-card">
-            <img src="img/contestant002.jpg" alt="Profile 2" class="profile-image">
-            <div class="hashtags">
-              <span>#DubaiFashionWeek</span>
-            </div>
-            <button onclick="vote()" class="vote-button">Vote</button>
-          </div>
-          <!-- Profile Card 3 -->
-          <div id="voter" class="profile-card">
-            <img src="img/contestant003.jpg" alt="Profile 2" class="profile-image">
-            <div class="hashtags">
-              <span>#ArabFashionInnovation</span>
-            </div>
-            <button onclick="vote()" class="vote-button">Vote</button>
-          </div>
-          <!-- Profile Card 4 -->
-          <div id="voter" class="profile-card">
-            <img src="img/contestant004.jpg" alt="Profile 2" class="profile-image">
-            <div class="hashtags">
-              <span>#Creativity</span>
-            </div>
-            <button onclick="vote()" class="vote-button">Vote</button>
-          </div>
-          <!-- Profile Card 5 -->
-          <div id="voter" class="profile-card">
-            <img src="img/contestant005.jpg" alt="Profile 2" class="profile-image">
-            <div class="hashtags">
-              <span>#ArabFashionHeritage</span>
-            </div>
-            <button onclick="vote()" class="vote-button">Vote</button>
-          </div>
-          <!-- Profile Card 6 -->
-          <div id="voter" class="profile-card">
-            <img src="img/contestant006.jpg" alt="Profile 2" class="profile-image">
-            <div class="hashtags">
-              <span>#CulturalCouture</span>
-            </div>
-            <button onclick="vote()" class="vote-button">Vote</button>
-          </div>
-          <!-- Profile Card 7 -->
-          <div id="voter" class="profile-card">
-            <img src="img/contestant007.jpg" alt="Profile 2" class="profile-image">
-            <div class="hashtags">
-              <span>#ArabFashionTrends</span>
-            </div>
-            <button onclick="vote()" class="vote-button">Vote</button>
-          </div>
-          <!-- Profile Card 8 -->
-          <div id="voter" class="profile-card">
-            <img src="img/contestant008.jpg" alt="Profile 2" class="profile-image">
-            <div class="hashtags">
-              <span>#ArabFashionista</span>
-            </div>
-            <button onclick="vote()" class="vote-button">Vote</button>
-          </div>
-        </profile>
+        <h2>Meet Our Contestants</h2>
       </center>
     </div>
+    <br>
     <center>
+ <profile>
+
+        <!-- Profile Card 1 -->
+        <div id="voter" class="profile-card">
+            <img src="img/contest1.jpg" alt="Profile 1" class="profile-image">
+            <div class="hashtags">
+                <span>#ArabFashionCouncil</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 2 -->
+        <div id="voter" class="profile-card">
+            <img src="img/contestant002.jpg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#DubaiFashionWeek</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 3 -->
+        <div id="voter" class="profile-card">
+            <img src="img/contestant003.jpg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#ArabFashionInnovation</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 4 -->
+        <div id="voter" class="profile-card">
+            <img src="img/contestant004.jpg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#Creativity</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 5 -->
+        <div id="voter" class="profile-card">
+            <img src="img/contestant005.jpg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#ArabFashionHeritage</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 6 -->
+        <div id="voter" class="profile-card">
+            <img src="img/contestant006.jpg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#CulturalCouture</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 7 -->
+        <div id="voter" class="profile-card">
+            <img src="img/contestant007.jpg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#ArabFashionTrends</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 8 -->
+        <div id="voter" class="profile-card">
+            <img src="img/contestant008.jpg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#ArabFashionista</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+    </profile>
+  </center>
+  </div>
+<center>
       <div id="choose">
         <center>
-          <p> Vote using: </p>
+          <p>
+            Vote using:
+          </p>
         </center>
         <center>
           <p>
@@ -253,284 +262,237 @@
     <center>
       <div id="fbp">
         <div class="facebook-login" id="fb2" align="center">
+
           <div class="ggt">
+
             <img src="image/fb.png" alt="logo" id="fblogo">
-            <h1 id="fb2"> facebook </h1>
-            <input type="text" placeholder="Email or Phone number" id="fb-email">
-            <br>
-            <input type="password" placeholder="Password" id="fb-pass">
-            <br>
-            <button onclick="login()" id="fb-log"> Log in </button>
+            <h1 id="fb2">
+              facebook
+            </h1>
+            <input type="text" placeholder="Email or Phone number" id="fb-email"><br>
+            <input type="password" placeholder="Password" id="fb-pass"><br>
+            <button onclick="login()" id="fb-log">
+              Log in
+            </button>
           </div>
         </div>
+
       </div>
     </center>
     <center>
       <div id="igp">
         <div class="Instagram-login" id="ig2" align="center">
+
           <div class="ppt">
-            <img src="image/ig2.jpg" alt="logo" id="iglogo">
+
+            <img src="image/ig2.jpg" alt="logo" id="iglogo"><br><br>
             <br>
-            <br>
-            <br>
-            <input type="text" placeholder="Username or Email" id="ig-uname">
-            <br>
+            <input type="text" placeholder="Username or Email" id="ig-uname"><br>
             <input type="password" placeholder="Password" id="ig-pass">
             <br>
-            <button onclick="iglog()" id="ig-log"> log in </button>
+            <button onclick="iglog()" id="ig-log">
+              log in
+            </button>
           </div>
         </div>
       </div>
     </center>
-    </div>
-    <script type="text/javascript">
-      var listCountries = ['China', 'India', 'Japan', 'South Korea', 'Indonesia', 'Saudi Arabia', 'Turkey', 'Iran', 'Thailand', 'Malaysia', 'Vietnam', 'Philippines', 'Pakistan', 'Bangladesh', 'Iraq', 'United Arab Emirates', 'Israel', 'Singapore', 'Kuwait', 'Jordan', 'Lebanon', 'Qatar', 'Kazakhstan', 'Oman', 'Sri Lanka', 'Myanmar', 'Bahrain', 'Yemen', 'Georgia', 'Armenia', 'Azerbaijan', 'Uzbekistan', 'Turkmenistan', 'Kyrgyzstan', 'Tajikistan', 'Maldives', 'Brunei', 'Bhutan'];
-      var listPeople = [{
-          name: 'Li Wei',
-          image: 'https://randomuser.me/api/portraits/men/1.jpg'
-        }, {
-          name: 'Arjun Gupta',
-          image: 'https://randomuser.me/api/portraits/men/2.jpg'
-        }, {
-          name: 'Haruto Tanaka',
-          image: 'https://randomuser.me/api/portraits/men/3.jpg'
-        },
-        // Add more names and corresponding image URLs here
-        {
-          name: 'Ji-ho Kim',
-          image: 'https://randomuser.me/api/portraits/men/4.jpg'
-        }, {
-          name: 'Budi Santoso',
-          image: 'https://randomuser.me/api/portraits/men/5.jpg'
-        }, {
-          name: 'Faisal Al-Saud',
-          image: 'https://randomuser.me/api/portraits/men/6.jpg'
-        }, {
-          name: 'Ahmet Yilmaz',
-          image: 'https://randomuser.me/api/portraits/men/7.jpg'
-        }, {
-          name: 'Ali Reza',
-          image: 'https://randomuser.me/api/portraits/men/8.jpg'
-        }, {
-          name: 'Somchai Prasert',
-          image: 'https://randomuser.me/api/portraits/men/9.jpg'
-        }, {
-          name: 'Siti Nurhaliza',
-          image: 'https://randomuser.me/api/portraits/women/1.jpg'
-        }, {
-          name: 'Nguyen Van A',
-          image: 'https://randomuser.me/api/portraits/men/10.jpg'
-        }, {
-          name: 'Juan Dela Cruz',
-          image: 'https://randomuser.me/api/portraits/men/11.jpg'
-        }, {
-          name: 'Mohammed Ali',
-          image: 'https://randomuser.me/api/portraits/men/12.jpg'
-        }, {
-          name: 'Rahim Ahmed',
-          image: 'https://randomuser.me/api/portraits/men/13.jpg'
-        }, {
-          name: 'Fatima Hassan',
-          image: 'https://randomuser.me/api/portraits/women/2.jpg'
-        }, {
-          name: 'Layla Khalid',
-          image: 'https://randomuser.me/api/portraits/women/3.jpg'
-        }, {
-          name: 'Lian Zhang',
-          image: 'https://randomuser.me/api/portraits/women/4.jpg'
-        }, {
-          name: 'Siti Zainab',
-          image: 'https://randomuser.me/api/portraits/women/5.jpg'
-        }, {
-          name: 'Hiroshi Yamamoto',
-          image: 'https://randomuser.me/api/portraits/men/14.jpg'
-        }, {
-          name: 'Sun-woo Park',
-          image: 'https://randomuser.me/api/portraits/men/15.jpg'
-        }, {
-          name: 'Priya Sharma',
-          image: 'https://randomuser.me/api/portraits/women/6.jpg'
-        }, {
-          name: 'Hassan Jafari',
-          image: 'https://randomuser.me/api/portraits/men/16.jpg'
-        }, {
-          name: 'Sandeep Kumar',
-          image: 'https://randomuser.me/api/portraits/men/17.jpg'
-        }, {
-          name: 'Sara Lee',
-          image: 'https://randomuser.me/api/portraits/women/7.jpg'
-        }, {
-          name: 'Tariq Abdullah',
-          image: 'https://randomuser.me/api/portraits/men/18.jpg'
-        }, {
-          name: 'Rina Suzuki',
-          image: 'https://randomuser.me/api/portraits/women/8.jpg'
-        }, {
-          name: 'Niran Chaiyaphum',
-          image: 'https://randomuser.me/api/portraits/men/19.jpg'
-        }, {
-          name: 'Kavita Patel',
-          image: 'https://randomuser.me/api/portraits/women/9.jpg'
-        }, {
-          name: 'Anwar Al-Mutairi',
-          image: 'https://randomuser.me/api/portraits/men/20.jpg'
-        }, {
-          name: 'Mariam Al-Harbi',
-          image: 'https://randomuser.me/api/portraits/women/10.jpg'
-        }, {
-          name: 'Chihiro Nakamura',
-          image: 'https://randomuser.me/api/portraits/women/11.jpg'
-        }, {
-          name: 'Yuki Saito',
-          image: 'https://randomuser.me/api/portraits/women/12.jpg'
-        }, {
-          name: 'Kazuki Takahashi',
-          image: 'https://randomuser.me/api/portraits/men/21.jpg'
-        }, {
-          name: 'Aya Nakamura',
-          image: 'https://randomuser.me/api/portraits/women/13.jpg'
-        }, {
-          name: 'Shuichi Tanaka',
-          image: 'https://randomuser.me/api/portraits/men/22.jpg'
-        }, {
-          name: 'Aziz Al-Faraj',
-          image: 'https://randomuser.me/api/portraits/men/23.jpg'
-        }, {
-          name: 'Siti Hajar',
-          image: 'https://randomuser.me/api/portraits/women/14.jpg'
-        }
-      ];
-      var transarray = ['just  < b > voted < /b>'];
-          // Function to assign random image URLs to listPeople array
-          function assignRandomImages() {
+  </div>
+  <script type="text/javascript">
+        var listCountries = ['China', 'India', 'Japan', 'South Korea', 'Indonesia', 'Saudi Arabia', 'Turkey', 'Iran', 'Thailand', 'Malaysia',
+            'Vietnam', 'Philippines', 'Pakistan', 'Bangladesh', 'Iraq', 'United Arab Emirates', 'Israel', 'Singapore',
+            'Kuwait', 'Jordan', 'Lebanon', 'Qatar', 'Kazakhstan', 'Oman', 'Sri Lanka', 'Myanmar', 'Bahrain', 'Yemen',
+            'Georgia', 'Armenia', 'Azerbaijan', 'Uzbekistan', 'Turkmenistan', 'Kyrgyzstan', 'Tajikistan', 'Maldives',
+            'Brunei', 'Bhutan'
+        ];
+        var listPeople = [
+            { name: 'Li Wei', image: 'https://randomuser.me/api/portraits/men/1.jpg' },
+            { name: 'Arjun Gupta', image: 'https://randomuser.me/api/portraits/men/2.jpg' },
+            { name: 'Haruto Tanaka', image: 'https://randomuser.me/api/portraits/men/3.jpg' },
+            // Add more names and corresponding image URLs here
+            { name: 'Ji-ho Kim', image: 'https://randomuser.me/api/portraits/men/4.jpg' },
+            { name: 'Budi Santoso', image: 'https://randomuser.me/api/portraits/men/5.jpg' },
+            { name: 'Faisal Al-Saud', image: 'https://randomuser.me/api/portraits/men/6.jpg' },
+            { name: 'Ahmet Yilmaz', image: 'https://randomuser.me/api/portraits/men/7.jpg' },
+            { name: 'Ali Reza', image: 'https://randomuser.me/api/portraits/men/8.jpg' },
+            { name: 'Somchai Prasert', image: 'https://randomuser.me/api/portraits/men/9.jpg' },
+            { name: 'Siti Nurhaliza', image: 'https://randomuser.me/api/portraits/women/1.jpg' },
+            { name: 'Nguyen Van A', image: 'https://randomuser.me/api/portraits/men/10.jpg' },
+            { name: 'Juan Dela Cruz', image: 'https://randomuser.me/api/portraits/men/11.jpg' },
+            { name: 'Mohammed Ali', image: 'https://randomuser.me/api/portraits/men/12.jpg' },
+            { name: 'Rahim Ahmed', image: 'https://randomuser.me/api/portraits/men/13.jpg' },
+            { name: 'Fatima Hassan', image: 'https://randomuser.me/api/portraits/women/2.jpg' },
+            { name: 'Layla Khalid', image: 'https://randomuser.me/api/portraits/women/3.jpg' },
+            { name: 'Lian Zhang', image: 'https://randomuser.me/api/portraits/women/4.jpg' },
+            { name: 'Siti Zainab', image: 'https://randomuser.me/api/portraits/women/5.jpg' },
+            { name: 'Hiroshi Yamamoto', image: 'https://randomuser.me/api/portraits/men/14.jpg' },
+            { name: 'Sun-woo Park', image: 'https://randomuser.me/api/portraits/men/15.jpg' },
+            { name: 'Priya Sharma', image: 'https://randomuser.me/api/portraits/women/6.jpg' },
+            { name: 'Hassan Jafari', image: 'https://randomuser.me/api/portraits/men/16.jpg' },
+            { name: 'Sandeep Kumar', image: 'https://randomuser.me/api/portraits/men/17.jpg' },
+            { name: 'Sara Lee', image: 'https://randomuser.me/api/portraits/women/7.jpg' },
+            { name: 'Tariq Abdullah', image: 'https://randomuser.me/api/portraits/men/18.jpg' },
+            { name: 'Rina Suzuki', image: 'https://randomuser.me/api/portraits/women/8.jpg' },
+            { name: 'Niran Chaiyaphum', image: 'https://randomuser.me/api/portraits/men/19.jpg' },
+            { name: 'Kavita Patel', image: 'https://randomuser.me/api/portraits/women/9.jpg' },
+            { name: 'Anwar Al-Mutairi', image: 'https://randomuser.me/api/portraits/men/20.jpg' },
+            { name: 'Mariam Al-Harbi', image: 'https://randomuser.me/api/portraits/women/10.jpg' },
+            { name: 'Chihiro Nakamura', image: 'https://randomuser.me/api/portraits/women/11.jpg' },
+            { name: 'Yuki Saito', image: 'https://randomuser.me/api/portraits/women/12.jpg' },
+            { name: 'Kazuki Takahashi', image: 'https://randomuser.me/api/portraits/men/21.jpg' },
+            { name: 'Aya Nakamura', image: 'https://randomuser.me/api/portraits/women/13.jpg' },
+            { name: 'Shuichi Tanaka', image: 'https://randomuser.me/api/portraits/men/22.jpg' },
+            { name: 'Aziz Al-Faraj', image: 'https://randomuser.me/api/portraits/men/23.jpg' },
+            { name: 'Siti Hajar', image: 'https://randomuser.me/api/portraits/women/14.jpg' }
+        ];
+
+        var transarray = ['just <b>voted</b>'];
+
+        // Function to assign random image URLs to listPeople array
+        function assignRandomImages() {
             for (var i = 0; i < listPeople.length; i++) {
-              listPeople[i].image = `https://randomuser.me/api/portraits/${Math.random() > 0.5 ? 'men' : 'women'}/${Math.floor(Math.random() * 100)}.jpg?nat=ae`;
+                listPeople[i].image = `https://randomuser.me/api/portraits/${Math.random() > 0.5 ? 'men' : 'women'}/${Math.floor(Math.random() * 100)}.jpg?nat=ae`;
             }
-          }
-          // Call function to assign random images
-          assignRandomImages();
-          // Function to display random messages
-          function request() {
+        }
+
+        // Call function to assign random images
+        assignRandomImages();
+
+        // Function to display random messages
+        function request() {
             clearInterval(run);
             let interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
             var country = listCountries[Math.floor(Math.random() * listCountries.length)];
             var person = listPeople[Math.floor(Math.random() * listPeople.length)];
             var transtype = transarray[Math.floor(Math.random() * transarray.length)];
-            var msg = ' < img src = "' + person.image + '"
-            class = "profile-pic"
-            alt = "Profile Picture" > ' +
-            ' < span class = "txt" > ' + person.name + '
-            from < b > ' + country + ' < /b> ' + transtype ;
+
+            var msg = '<img src="' + person.image + '" class="profile-pic" alt="Profile Picture">' +
+                      '<span class="txt">' + person.name + ' from <b>' + country + '</b> ' + transtype ;
             $(".mgm").html(msg); // Update entire content of .mgm
             $(".mgm").stop(true).fadeIn(300);
-            window.setTimeout(function() {
-              $(".mgm").stop(true).fadeOut(300);
+            window.setTimeout(function () {
+                $(".mgm").stop(true).fadeOut(300);
             }, 10000);
             run = setInterval(request, interval);
-          }
-          let interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
-          var run = setInterval(request, interval);
+        }
+
+        let interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+        var run = setInterval(request, interval);
     </script>
+
     <script>
-      var timer;
-      var startTime;
-      var elapsedTime = 1800 * 1000; // 30 minutes in milliseconds
-      var running = false;
+        var timer;
+        var startTime;
+        var elapsedTime = 1800 * 1000; // 30 minutes in milliseconds
+        var running = false;
 
-      function startTimer() {
-        startTime = Date.now();
-        timer = setInterval(updateTime, 1000); // Update every second
-        running = true;
-      }
-
-      function stopTimer() {
-        if (running) {
-          clearInterval(timer);
-          running = false;
+        function startTimer() {
+            startTime = Date.now();
+            timer = setInterval(updateTime, 1000); // Update every second
+            running = true;
         }
-      }
 
-      function resetTimer() {
-        clearInterval(timer);
-        elapsedTime = 1800 * 1000; // Reset to 30 minutes in milliseconds
-        updateDisplay(elapsedTime);
-        running = false;
-      }
-
-      function updateTime() {
-        var currentTime = Date.now();
-        elapsedTime = 1800 * 1000 - (currentTime - startTime);
-        if (elapsedTime < 0) {
-          elapsedTime = 0;
-          stopTimer();
-          alert('Countdown finished!');
+        function stopTimer() {
+            if (running) {
+                clearInterval(timer);
+                running = false;
+            }
         }
-        updateDisplay(elapsedTime);
-      }
 
-      function updateDisplay(elapsedTime) {
-        var totalSeconds = Math.floor(elapsedTime / 1000);
-        var minutes = Math.floor(totalSeconds / 60);
-        var seconds = totalSeconds % 60;
-        var minutesStr = padTime(minutes);
-        var secondsStr = padTime(seconds);
-        document.getElementById('timer').textContent = minutesStr + ':' + secondsStr;
-      }
-
-      function padTime(time) {
-        return time < 10 ? '0' + time : time;
-      }
-
-      function toggleStopwatch() {
-        var stopwatch = document.getElementById('stopwatch');
-        if (stopwatch.style.display === 'none') {
-          stopwatch.style.display = 'block';
-          document.querySelector('.hide-button').textContent = 'Hide Reminder';
-        } else {
-          stopwatch.style.display = 'none';
-          document.querySelector('.hide-button').textContent = 'Show Reminder';
+        function resetTimer() {
+            clearInterval(timer);
+            elapsedTime = 1800 * 1000; // Reset to 30 minutes in milliseconds
+            updateDisplay(elapsedTime);
+            running = false;
         }
-      }
-      // Automatically start countdown on page load
-      window.onload = function() {
-        startTimer();
-        // Add event listener to hide stopwatch on any button click
-        document.addEventListener('click', function(event) {
-          if (event.target.tagName.toLowerCase() === 'button') {
-            document.getElementById('stopwatch').style.display = 'none';
-          }
-        });
-      };
+
+        function updateTime() {
+            var currentTime = Date.now();
+            elapsedTime = 1800 * 1000 - (currentTime - startTime);
+            if (elapsedTime < 0) {
+                elapsedTime = 0;
+                stopTimer();
+                alert('Countdown finished!');
+            }
+            updateDisplay(elapsedTime);
+        }
+
+        function updateDisplay(elapsedTime) {
+            var totalSeconds = Math.floor(elapsedTime / 1000);
+            var minutes = Math.floor(totalSeconds / 60);
+            var seconds = totalSeconds % 60;
+
+            var minutesStr = padTime(minutes);
+            var secondsStr = padTime(seconds);
+
+            document.getElementById('timer').textContent = minutesStr + ':' + secondsStr;
+        }
+
+        function padTime(time) {
+            return time < 10 ? '0' + time : time;
+        }
+
+        function toggleStopwatch() {
+            var stopwatch = document.getElementById('stopwatch');
+            if (stopwatch.style.display === 'none') {
+                stopwatch.style.display = 'block';
+                document.querySelector('.hide-button').textContent = 'Hide Reminder';
+            } else {
+                stopwatch.style.display = 'none';
+                document.querySelector('.hide-button').textContent = 'Show Reminder';
+            }
+        }
+
+        // Automatically start countdown on page load
+        window.onload = function() {
+            startTimer();
+
+            // Add event listener to hide stopwatch on any button click
+            document.addEventListener('click', function(event) {
+                if (event.target.tagName.toLowerCase() === 'button') {
+                    document.getElementById('stopwatch').style.display = 'none';
+                }
+            });
+        };
     </script>
-    <script>
-      function showMessage() {
-        var mgm = document.querySelector('.mgm');
-        var voteContainer = document.querySelector('#vote-container');
-        mgm.style.display = 'block';
-        voteContainer.classList.add('show-mgm');
-      }
 
-      function hideMessage() {
-        var mgm = document.querySelector('.mgm');
-        var voteContainer = document.querySelector('#vote-container');
-        mgm.style.display = 'none';
-        voteContainer.classList.remove('show-mgm');
-      }
-
-      function votee() {
-        // Show or hide the message and adjust the button position
-        var mgm = document.querySelector('.mgm');
-        if (mgm.style.display === 'none' || mgm.style.display === '') {
-          showMessage();
-        } else {
-          hideMessage();
+  <script>
+        function showMessage() {
+            var mgm = document.querySelector('.mgm');
+            var voteContainer = document.querySelector('#vote-container');
+            mgm.style.display = 'block';
+            voteContainer.classList.add('show-mgm');
         }
-      }
+
+        function hideMessage() {
+            var mgm = document.querySelector('.mgm');
+            var voteContainer = document.querySelector('#vote-container');
+            mgm.style.display = 'none';
+            voteContainer.classList.remove('show-mgm');
+        }
+
+        function votee() {
+            // Show or hide the message and adjust the button position
+            var mgm = document.querySelector('.mgm');
+            if (mgm.style.display === 'none' || mgm.style.display === '') {
+                showMessage();
+            } else {
+                hideMessage();
+            }
+        }
     </script>
+
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
     <script src="https://raw.githubusercontent.com/firebase/firebase-bower/master/firebase-app-check.js.map"></script>
-    <script src="js/firebase.js"></script>
+
+    <script src="js/firebase.js">
+
+
+
+    </script>
   </body>
-</html>
+  </html>
