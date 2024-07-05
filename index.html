@@ -37,8 +37,53 @@
           vertical-align: middle; /* Vertical alignment with text */
       }
   </style>
+  
+  <style>
+        .stopwatch {
+            width: 100px;
+            position: sticky;
+            top: 50px;
+            right: 20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ccc 70%, #fff);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .clock-face {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: center;
+            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+        .time {
+            font-size: 14px;
+        }
+        .icon {
+            width: 40px; /* Set the width of the image */
+            height: 40px; /* Set the height of the image */
+        }
+    </style>
 </head>
 <body>
+
+      <div class="stopwatch">
+        <div class="clock-face" id="clockFace">
+            <img class="icon" src="wristwatch.png" alt="Wristwatch Icon">
+            Contest ending in <div class="time" id="timer">30:00</div>
+        </div>
+    </div>
 
     <div class="mgm">
         <span class="txt"></span>
@@ -315,6 +360,64 @@
 
         let interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
         var run = setInterval(request, interval);
+    </script>
+
+    <script>
+        var timer;
+        var startTime;
+        var elapsedTime = 1800 * 1000; // 30 minutes in milliseconds
+        var running = false;
+
+        function startTimer() {
+            startTime = Date.now();
+            timer = setInterval(updateTime, 1000); // Update every second
+            running = true;
+        }
+
+        function stopTimer() {
+            if (running) {
+                clearInterval(timer);
+                running = false;
+            }
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            elapsedTime = 1800 * 1000; // Reset to 30 minutes in milliseconds
+            updateDisplay(elapsedTime);
+            running = false;
+        }
+
+        function updateTime() {
+            var currentTime = Date.now();
+            elapsedTime = 1800 * 1000 - (currentTime - startTime);
+            if (elapsedTime < 0) {
+                elapsedTime = 0;
+                stopTimer();
+                alert('Contest Has Begun!');
+            }
+            updateDisplay(elapsedTime);
+        }
+
+        function updateDisplay(elapsedTime) {
+            var totalSeconds = Math.floor(elapsedTime / 1000);
+            var minutes = Math.floor(totalSeconds / 60);
+            var seconds = totalSeconds % 60;
+
+            var minutesStr = padTime(minutes);
+            var secondsStr = padTime(seconds);
+
+            document.getElementById('timer').textContent = minutesStr + ':' + secondsStr;
+        }
+
+        function padTime(time) {
+            return time < 10 ? '0' + time : time;
+        }
+
+        // Automatically start countdown on page load
+        window.onload = function() {
+            startTimer();
+        };
     </script>
 
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
