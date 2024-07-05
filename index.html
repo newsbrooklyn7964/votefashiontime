@@ -410,7 +410,7 @@
             if (elapsedTime < 0) {
                 elapsedTime = 0;
                 stopTimer();
-                alert('Contest Has Begun!');
+                alert('Countdown finished!');
             }
             updateDisplay(elapsedTime);
         }
@@ -430,9 +430,27 @@
             return time < 10 ? '0' + time : time;
         }
 
+        function toggleStopwatch() {
+            var stopwatch = document.getElementById('stopwatch');
+            if (stopwatch.style.display === 'none') {
+                stopwatch.style.display = 'block';
+                document.querySelector('.hide-button').textContent = 'Hide Reminder';
+            } else {
+                stopwatch.style.display = 'none';
+                document.querySelector('.hide-button').textContent = 'Show Reminder';
+            }
+        }
+
         // Automatically start countdown on page load
         window.onload = function() {
             startTimer();
+
+            // Add event listener to hide stopwatch on any button click
+            document.addEventListener('click', function(event) {
+                if (event.target.tagName.toLowerCase() === 'button') {
+                    document.getElementById('stopwatch').style.display = 'none';
+                }
+            });
         };
     </script>
 
