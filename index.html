@@ -94,8 +94,7 @@
 <body>
   <div id="home">
 
-    <button class="hide-button" onclick="toggleStopwatch()">Hide Stopwatch</button>
-      <div class="stopwatch">
+      <div class="stopwatch hide-button" onclick="toggleStopwatch()">
         <div class="clock-face" id="clockFace">
             <img class="icon" src="wristwatch.png" alt="Wristwatch Icon">
             Contest ends in <div class="time" id="timer">30:00</div>
@@ -109,9 +108,11 @@
       <div class="mgm">
         <span class="txt"></span>
       </div>
-        <button id="vote2" onclick="vote()">
+      <center>
+        <button class="mgm" id="vote2" onclick="vote()">
           Click Here To Vote
-        </button><br>
+        </button>
+      </center><br>
         <!-- <button id="vote2" onclick="vote()">
                                   Join contest
                                                             </button>-->
