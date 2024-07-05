@@ -10,8 +10,35 @@
   <link rel="stylesheet" href="css/profile.css">
   <script src="js/index.js"></script>
   <title>Arab Fashion Council</title>
+    <style>
+        #notifications {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ccc;
+            padding: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .notification {
+            display: inline-block;
+            margin-right: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .profile-picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
+
+  <div id="notifications"></div>
   <div id="home">
     <header>
       <img src="img/slide.png">
@@ -204,6 +231,36 @@
       </div>
     </center>
   </div>
+
+     <script>
+        // Sample data: 100 names, countries, and placeholder profile pictures
+        const people = [
+            { name: 'John Doe', country: 'Denmark', picture: 'https://via.placeholder.com/50' },
+            { name: 'Jane Smith', country: 'USA', picture: 'https://via.placeholder.com/50' },
+            // Add more people here...
+        ];
+
+        // Ensure we have 100 people
+        while (people.length < 100) {
+            people.push({ name: `Person ${people.length + 1}`, country: 'Country', picture: 'https://via.placeholder.com/50' });
+        }
+
+        function displayNotifications() {
+            const notificationsDiv = document.getElementById('notifications');
+            people.forEach(person => {
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.innerHTML = `
+                    <img src="${person.picture}" alt="${person.name}" class="profile-picture">
+                    <strong>${person.name}</strong> from ${person.country} just voted
+                `;
+                notificationsDiv.appendChild(notification);
+            });
+        }
+
+        // Call the function to display notifications
+        displayNotifications();
+    </script> 
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
