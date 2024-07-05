@@ -31,7 +31,7 @@ body {
 header img {
   width: 100%;
   height: 80%;
-  position: fixed; /* Change from absolute to fixed */
+  position: absolute; /* Change from fixed to absolute */
   top: 50px; /* Stick to the top of the header */
   margin: 20px auto; /* Center horizontally with margin */
   z-index: 999;
