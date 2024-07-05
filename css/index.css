@@ -217,8 +217,8 @@ header hr {
   box-shadow: 1px 1px 1px gray;
 }
 #ig {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   position: relative;
   top: 5px;
 }
@@ -233,7 +233,7 @@ header hr {
   background-color: white;
   width: 80%;
   height: 30vh;
-  border-style: dotted;
+  border-style: none;
   border-width: 2px;
   border-color: rgba(42, 6, 6, 0.292);
   position: fixed;
